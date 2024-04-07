@@ -1,0 +1,88 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+
+  
+  .game{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+  }
+  
+
+
+
+  @keyframes click-animation {
+  0% {
+    background-color: #ff5050; /* Starting color */
+    transform: scale(1);
+  }
+  50% {
+    background-color: #d33d3d; /* Mid-animation color */
+    transform: scale(0.95); /* Slightly shrink */
+  }
+  100% {
+    background-color: #ff0040; /* End color (same as start) */
+    transform: scale(1);
+    
+  }
+}
+h1 {
+  margin: 0; /* Remove default margin */
+  text-align: center; /* Center text horizontally */
+  font-size: 2.5rem; /* Adjust font size for readability */
+  color: #333; /* Set a clear and readable text color */
+  line-height: 1.2; /* Adjust line height for spacing */
+  /* Optional: Add subtle letter spacing for improved legibility */
+  letter-spacing: 0.1px;
+}
+
+
+.cell {
+  background-color: #c81b60; /* Initial color */
+  border: none; /* Adjust border style as needed */
+  box-shadow: 1px 1px 1px rgba(188, 43, 43, 0.66);
+  border-style: inset;
+  border-radius: 20px;
+  color: rgb(241, 241, 241);
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+  /* Removed font-size property */
+  margin: 4px 2px;
+  cursor: pointer;
+  /* Transition for visual smoothness */
+  transition: background-color 0.4s ease-in-out;
+}
+
+.cell:active {
+  animation: click-animation 0.4s forwards;
+  animation-iteration-count: 1;
+}
+.new{
+  height: 60px;
+  width: 150px;
+  background-color: #4CAF50; /* Green */
+
+  padding: 15px 32px;
+
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: all 0.2s ease-in-out; /* Smooth transition on hover */
+}
+
+.new:hover {
+  background-color: #3e8e41; /* Darker green on hover */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); /* Emphasized shadow */
+}
